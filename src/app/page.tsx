@@ -72,7 +72,101 @@ const steps2 = [
 export default function Home() {
   return (
     <div className='bg-[#080808] py-4 md:py-6 flex flex-col gap-10'>
-      <div className='flex bg-white/10 p-2 justify-between items-center mx-5 lg:mx-20 rounded-[24px] px-4 py-2'>
+      <div className=' mx-auto p-3 md:p-6 bg-[#0F0F0F] rounded-lg shadow-lg max-w-[750px]'>
+        <h1 className='text-[18px] font-bold text-center mb-2 text-white'>
+          Sign Up
+        </h1>
+        <p className='text-center text-[#525252] text-sm mb-8'>
+          Join the Fight!
+        </p>
+
+        <form className='space-y-6'>
+          <div className='flex gap-3'>
+            <div className='flex-1'>
+              <label className='block text-[#A6A6A6] text-sm mb-1'>
+                Username
+              </label>
+              <input
+                type='text'
+                placeholder='Choose a username'
+                className='w-full px-4 py-2 bg-[#0D0D0D] border border-[#1F1F1F] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder:text-[#525252] text-sm flex-1'
+              />
+            </div>
+
+            <div className='flex-1'>
+              <label className='block text-[#A6A6A6] text-sm mb-1'>
+                Email Address
+              </label>
+              <input
+                type='email'
+                placeholder='Enter your email'
+                className='w-full px-4 py-2 bg-[#0D0D0D] border border-[#1F1F1F] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder:text-[#525252] text-sm flex-1'
+              />
+            </div>
+          </div>
+          <div className='flex gap-3'>
+            <div className='flex-1'>
+              <label className='block text-[#A6A6A6] text-sm mb-1'>
+                Password
+              </label>
+              <input
+                type='password'
+                className='w-full px-4 py-2 bg-[#0D0D0D] border border-[#1F1F1F] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder:text-[#525252] text-sm flex-1'
+              />
+              <p className='text-xs text-white/20 mt-2'>
+                Password must be at least 7 characters, include a special
+                character and a number
+              </p>
+            </div>
+
+            <div className='flex-1'>
+              <label className='block text-[#A6A6A6] text-sm mb-1'>
+                Confirm Password
+              </label>
+              <input
+                type='password'
+                className='w-full px-4 py-2 bg-[#0D0D0D] border border-[#1F1F1F] rounded-md text-white focus:outline-none focus:ring-2 focus:ring-purple-500 placeholder:text-[#525252] text-sm flex-1'
+              />
+              <p className='text-xs text-white/20 mt-2'>
+                Confirm password must match password
+              </p>
+            </div>
+          </div>
+          <div className='flex items-center'>
+            <input
+              type='checkbox'
+              id='age-check'
+              className='h-4 w-4 text-purple-500 focus:ring-purple-400 border-[#1F1F1F] rounded'
+            />
+            <label htmlFor='age-check' className='ml-2 text-[#525252] text-xs'>
+              I am 16+ years old
+            </label>
+          </div>
+
+          <div className='pt-4 flex gap-4 items-center text-sm'>
+            <p className='text-center text-gray-400 flex-1'>
+              Already have an account?{" "}
+              <a href='#' className='text-purple-400 hover:underline'>
+                Sign in
+              </a>
+            </p>
+            <button
+              type='submit'
+              className='flex-1 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-md transition duration-200'
+            >
+              Continue
+            </button>
+          </div>
+
+          <p className='text-xs text-[#525252] text-center'>
+            By creating a new account, you agree to <br /> Game Gambit's{" "}
+            <span className='text-purple-700'>Terms & Conditions</span> and
+            confirm you are 18+
+          </p>
+        </form>
+      </div>
+
+      {/* <div className='flex bg-white/10 p-2 justify-between items-center mx-5 lg:mx-20 rounded-[24px] px-4 py-2'>
         <div className='bg-white rounded-full p-[1px]'>
           <Logo />
         </div>
@@ -131,7 +225,6 @@ export default function Home() {
             "Fortnite",
           ].map((game) => (
             <div className='bg-white/10 p-6 rounded-xl max-w-7xl mx-auto'>
-              {/* Game Header */}
               <p className='text-sm text-[#737373] mb-1'>Game</p>
               <div className='flex items-center space-x-4 mb-6 '>
                 <img
@@ -142,14 +235,12 @@ export default function Home() {
                 <p className='text-xl font-semibold'>{game}</p>
               </div>
 
-              {/* Match Cards */}
               <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
                 {matches.map((match) => (
                   <div
                     key={match.id}
                     className='bg-[#0F0F0F] rounded-xl p-4 flex flex-col items-center text-center'
                   >
-                    {/* Live status */}
                     {match.isLive && (
                       <div className='flex items-center gap-2 text-green-400 text-sm mb-2'>
                         <div className='bg-green-500 rounded-full size-2' />
@@ -160,7 +251,6 @@ export default function Home() {
                     )}
 
                     <div className='flex gap-2 items-center'>
-                      {/* Player 1 */}
                       <div className='flex flex-col gap-4 flex-1 text-sm'>
                         <div className='flex flex-col items-center border-[0.5px] border-blue-500 rounded-lg p-2 mb-1 gap-1 '>
                           <div className='w-12 h-12 bg-red-300 rounded-full mb-1' />
@@ -184,9 +274,8 @@ export default function Home() {
                         </span>
                       </div>
 
-                      <span className='my-1 text-sm text-gray-300'>vs</span>
+                      <span className='my-1 text-sm text-[#A6A6A6] text-sm'>vs</span>
 
-                      {/* Player 2 */}
                       <div className='flex flex-col gap-4 flex-1 text-sm'>
                         <div className='flex flex-col items-center border-[0.5px] border-red-500 rounded-lg p-2 mb-1 '>
                           <div className='w-12 h-12 bg-red-300 rounded-full mb-1' />
@@ -211,7 +300,6 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Wager */}
                     <div className='flex gap-3 justify-between w-full mt-4 items-center'>
                       <p className='text-[#737373] text-sm'>Wager:</p>
                       <div className='flex items-center gap-2 text-sm text-white'>
@@ -266,7 +354,7 @@ export default function Home() {
             <LogoBig />
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

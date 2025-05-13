@@ -1,6 +1,13 @@
-import Image from "next/image";
 import { SiSolana } from "react-icons/si";
-import { BsWallet2, BsPeople, BsPatchCheckFill } from "react-icons/bs";
+import {
+  BsWallet2,
+  BsPeople,
+  BsPatchCheckFill,
+  BsDiscord,
+  BsTwitter,
+} from "react-icons/bs";
+import { FaFacebook } from "react-icons/fa";
+import { BiMessage } from "react-icons/bi";
 
 export interface Player {
   username: string;
@@ -63,28 +70,6 @@ const steps2 = [
 ];
 
 export default function Home() {
-  const steps = [
-    {
-      number: 1,
-      title: "Connect your Solana wallet to play",
-      description: "Phantom, Sofflare, Glow, e.t.c",
-      icon: "🔌",
-    },
-    {
-      number: 2,
-      title: "Find an opponent and stake $SOL",
-      description:
-        "Find opponents by player ID, location (with location access), or randomly.",
-      icon: "👥",
-    },
-    {
-      number: 3,
-      title: "Play, verify, and win instant payouts!",
-      description:
-        "Get rewards via Solana smart contracts for speed and security.",
-      icon: "💰",
-    },
-  ];
   return (
     <div className='bg-[#080808] py-4 md:py-6 flex flex-col gap-10'>
       <div className='flex bg-white/10 p-2 justify-between items-center mx-5 lg:mx-20 rounded-[24px] px-4 py-2'>
@@ -243,7 +228,7 @@ export default function Home() {
       </div>
       <footer className='text-white py-8 px-4 mx-5 lg:mx-20'>
         <div className='flex flex-col gap-5 md:flex-row md:gap-20 text-sm justify-between items-center'>
-          <div className='flex flex-col gap-5 w-full md:w-[45%]'>
+          <div className='flex flex-col gap-4 md:gap-6 w-full md:w-[45%]'>
             <p className='text-gray-400 md:mb-0'>
               Game Gambit. All rights reserved
             </p>
@@ -262,7 +247,12 @@ export default function Home() {
                 </a>
               </div>
             </div>
-
+            <div className='flex items-center gap-2 md:gap-4'>
+              <BsDiscord className='text-2xl text-[#A6A6A6] md:text-4xl' />
+              <BsTwitter className='text-2xl text-[#A6A6A6] md:text-4xl' />
+              <FaFacebook className='text-2xl text-[#A6A6A6] md:text-4xl' />
+              <BiMessage className='text-2xl text-[#A6A6A6] md:text-4xl' />
+            </div>
             <div className='flex flex-wrap gap-4'>
               <a href='#' className='text-gray-400 hover:text-white text-sm'>
                 Privacy Policy

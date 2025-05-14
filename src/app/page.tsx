@@ -72,7 +72,7 @@ const steps2 = [
 export default function Home() {
   return (
     <div className='bg-[#080808] py-4 md:py-6 flex flex-col gap-10'>
-      {/* <div className='flex bg-white/10 p-2 justify-between items-center mx-5 lg:mx-20 rounded-[24px] px-4 py-2'>
+      <div className='flex bg-white/10 p-2 justify-between items-center mx-5 lg:mx-20 rounded-[24px] px-4 py-2'>
         <div className='bg-white rounded-full p-[1px]'>
           <Logo />
         </div>
@@ -180,7 +180,9 @@ export default function Home() {
                         </span>
                       </div>
 
-                      <span className='my-1 text-sm text-[#A6A6A6] text-sm'>vs</span>
+                      <span className='my-1 text-sm text-[#A6A6A6] text-sm'>
+                        vs
+                      </span>
 
                       <div className='flex flex-col gap-4 flex-1 text-sm'>
                         <div className='flex flex-col items-center border-[0.5px] border-red-500 rounded-lg p-2 mb-1 '>
@@ -260,7 +262,7 @@ export default function Home() {
             <LogoBig />
           </div>
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 }

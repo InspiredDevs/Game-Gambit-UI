@@ -16,3 +16,16 @@ const Page = (props: Props) => {
   );
 };
 export default Page;
+
+const test = [
+  {
+    name: "",
+    description: "",
+    photos: [
+      {
+        image: "",
+        description: "",
+      },
+    ],
+  },
+];

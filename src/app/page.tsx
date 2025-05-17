@@ -90,6 +90,8 @@ export default function Home() {
         </div>
       </div>
 
+      <StakeSOLHero />
+
       <div className='bg-black text-white py-16 px-4'>
         <h2 className='text-3xl font-bold text-center mb-10'>How it works</h2>
 
@@ -180,9 +182,7 @@ export default function Home() {
                         </span>
                       </div>
 
-                      <span className='my-1 text-sm text-[#A6A6A6] text-sm'>
-                        vs
-                      </span>
+                      <span className='my-1 text-sm text-[#A6A6A6]'>vs</span>
 
                       <div className='flex flex-col gap-4 flex-1 text-sm'>
                         <div className='flex flex-col items-center border-[0.5px] border-red-500 rounded-lg p-2 mb-1 '>
@@ -425,6 +425,43 @@ const SignUp = () => {
           confirm you are 18+
         </p>
       </form>
+    </div>
+  );
+};
+
+// bg-gradient-to-b from-purple-900 to-indigo-900 text-white
+
+const StakeSOLHero = () => {
+  return (
+    <div className='min-h-[60vh] '>
+      <div className='container mx-auto px-4 py-20 flex flex-col items-center justify-center text-center'>
+        <h1 className='text-4xl md:text-5xl font-bold mb-6'>
+          Stake $SOL, Win Big
+        </h1>
+
+        <p className='text-xl md:text-2xl max-w-2xl mb-8 text-indigo-200'>
+          Place your $SOL in high-stakes 1v1 matches on Game Gambit and get
+          verified instant payouts.
+        </p>
+
+        <div className='w-full max-w-md mb-6'>
+          <div className='bg-[#525252] flex gap-4 p-1'>
+            <input
+              type='email'
+              placeholder='Enter email address'
+              className='w-full p-2 bg-[#525252] text-white placeholder-indigo-300 focus:outline-none focus:ring-2 focus:ring-purple-500'
+            />
+            <button className='bg-[#AB33C6] text-white font-bold p-2 hover:opacity-90 transition-opacity whitespace-nowrap'>
+              Join Waitlist
+            </button>
+          </div>
+        </div>
+
+        {/* Promo Banner */}
+        <div className='mt-8 text-white font-bold'>
+          First 100 Sign-Ups Get 10 $SOL!
+        </div>
+      </div>
     </div>
   );
 };
